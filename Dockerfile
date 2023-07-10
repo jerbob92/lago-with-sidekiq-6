@@ -1,4 +1,4 @@
-FROM getlago/api:v0.38.0-beta as build
+FROM getlago/api:v0.39.0-beta as build
 
 RUN apk add --no-cache git
 RUN bundle remove sidekiq && bundle add sidekiq --version "~> 6"
