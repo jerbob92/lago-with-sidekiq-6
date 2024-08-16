@@ -1,6 +1,6 @@
 FROM getlago/api:v1.8.2 as build
 
-RUN bundle remove sidekiq && bundle add sidekiq --version "~> 6"
+RUN bundle remove sidekiq && bundle add sidekiq --version "~> 6.5.12"
 
 FROM getlago/api:v1.8.2
 
