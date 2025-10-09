@@ -1,8 +1,8 @@
-FROM getlago/api:v1.34.1 as build
+FROM getlago/api:v1.34.2 as build
 
 RUN bundle remove sidekiq && bundle add sidekiq --version "~> 6.5.12"
 
-FROM getlago/api:v1.34.1
+FROM getlago/api:v1.34.2
 
 COPY --from=build /usr/local/bundle/ /usr/local/bundle
 COPY --from=build /app/Gemfile /app
